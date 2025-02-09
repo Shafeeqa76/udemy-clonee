@@ -32,7 +32,7 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
-  
+
 }
 
 .navbar__s2 input {
@@ -52,13 +52,14 @@ body {
     gap: 10px;
     align-items: center;
 }
+
 /*My Learning popup */
-.mylearning{
+.mylearning {
     position: relative;
     cursor: pointer;
 }
 
-.mylearning__popup{
+.mylearning__popup {
     position: absolute;
     background-color: white;
     border: solid black 1px;
@@ -69,7 +70,7 @@ body {
     display: none;
 }
 
-.mylearning:hover .mylearning__popup{
+.mylearning:hover .mylearning__popup {
     display: block;
 }
 
@@ -79,33 +80,62 @@ body {
     justify-content: space-around;
     border-bottom: solid black 1px;
 }
-.categories p{
+
+.categories p {
     background-color: #A435F0;
     padding: 10px;
     border-radius: 30px;
     color: white;
 }
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color:black;
+    background-color: solid #A435F0 ;
+    cursor: pointer;
+    border: solid black 1px;
+}
 
-.sale-image{
+.sale-image {
     position: relative;
 }
-.sale-image img{
+
+.sale-image img {
     width: 100%;
 }
-.sale-image__offer{
+
+.sale-image__offer {
     width: 35%;
-    border:solid black 2px;
+    border: solid black 2px;
     background-color: white;
     padding: 2%;
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
 }
-.recommended{
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.recommended {
     padding: 20px;
 }
 
-.recommended__container{
+.recommended__container {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
@@ -113,54 +143,65 @@ body {
     margin-right: 20px;
 
 }
-.course-card{
+
+.course-card {
     width: 300px;
-   
+
 }
-.course-card img{
+
+.course-card img {
     width: 100%;
     height: 50%;
 }
-.topics{
+
+.topics {
     padding: 10px;
 }
-.topics__container{
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-      flex-wrap: wrap;
+
+.topics__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
-.topics__container p{
+
+.topics__container p {
     border: solid gray 2px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
 
 }
-.popular{
+
+.popular {
     padding: 10px;
-   
+
 }
-.popular__container{
+
+.popular__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
-   
+
 }
-.footer{
+
+.footer {
     padding: 30px;
     background-color: black;
     color: white;
 }
-.footer_one{
+
+.footer_one {
     display: flex;
     gap: 10px;
 }
-.footer_one p{
+
+.footer_one p {
     margin: 20px;
 }
-.footer_two{
+
+.footer_two {
     justify-content: space-between;
     display: flex;
     margin: 20px;
